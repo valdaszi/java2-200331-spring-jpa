@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Darbuotojai</title>
+</head>
+<body>
+    <h1>TODO - Cia bus darbuotoju sarasas</h1>
+
+    <pre>
+        DEBUG!!!:
+        TotalPages: <span th:text="${page.totalPages}"></span>
+        TotalElements: <span th:text="${page.totalElements}"></span>
+        Number: <span th:text="${page.number}"></span>
+        Size: <span th:text="${page.size}"></span>
+    </pre>
+
+    <a th:if="${page.number > 0}" th:href="@{/employee(pageNumber=${page.number-1},pageSize=${page.size})}">Atgal</a>
+    <a th:if="${page.number < page.totalPages-1}" th:href="@{/employee(pageNumber=${page.number+1},pageSize=${page.size})}">Tolyn</a>
+
+    <table>
+        <tr>
+            <td>Kodas</td>
+            <td>Vardas</td>
+            <td>Pavarde</td>
+        </tr>
+
+<!--        <tr>-->
+<!--            <td><a href="employee/10001">10001</a></td>-->
+<!--            <td>Jonas</td>-->
+<!--            <td>Jonaitis</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td><a href="employee/10002">10002</a></td>-->
+<!--            <td>Petras</td>-->
+<!--            <td>Petraitis</td>-->
+<!--        </tr>-->
+
+        <!-- sarasas ateina kintamajame: page.content -->
+        <tr th:each="emp : ${page.content}">
+            <td> <a th:href="@{/employee/{empNo}(empNo=${emp.empNo})}"><span th:text="${emp.empNo}"></span></a> </td>
+            <td th:text="${emp.firstName}"></td>
+            <td th:text="${emp.lastName}"></td>
+        </tr>
+
+    </table>
+</body>
+</html>

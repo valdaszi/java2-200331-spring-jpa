@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Darbuotojas</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Kodas</th><td th:text="${emp.empNo}"></td>
+        </tr>
+        <tr>
+            <th>Vardas</th><td th:text="${emp.firstName}"></td>
+        </tr>
+        <tr>
+            <th>Pavarde</th><td th:text="${emp.lastName}"></td>
+        </tr>
+        <tr>
+            <th>Lytis</th><td th:text="${emp.gender}"></td>
+        </tr>
+        <tr>
+            <th>Gimimo data</th><td th:text="${emp.birthDate}"></td>
+        </tr>
+        <tr>
+            <th>Dirba nuo</th><td th:text="${emp.hireDate}"></td>
+        </tr>
+    </table>
+
+    <a th:href="@{/employee}">Atgal i sarasa</a>
+</body>
+</html>

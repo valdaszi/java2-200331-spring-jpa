@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
+/**
+ * Kazkas naudingo paasuta apie Salary
+ */
 @Entity
 @Table(name = "salaries")
 public class Salary {

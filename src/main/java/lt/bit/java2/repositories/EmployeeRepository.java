@@ -12,17 +12,22 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     /**
-     *  Spring JPA pagal metodo varda automatiškai sugeneruoja reikalingą SQL Query
-     *  https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
+     * Spring JPA pagal metodo varda automatiškai sugeneruoja reikalingą SQL Query
+     * https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
      */
     List<Employee> findByBirthDate(LocalDate birthDate);
 
 
     /**
-     *  Jei automatiškai generuojami Query mums netinka, tai galime patys parašyti reikalingą arba JPQL
-     *  arba standartine SQL kalba
-     *  p.s. jei rašome standartine SQL, tada reikia nurodyti: nativeQuery = true
-     */
+      * Jei automatiškai generuojami Query mums netinka, tai galime patys parašyti reikalingą arba JPQL
+      * arba standartine SQL kalba
+      * p.s. jei rašome standartine SQL, tada reikia nurodyti: nativeQuery = true
+      * Grazinamas sarsas darbuotoju gimusiu nurodytame periode.
+      *
+      * @param d1 periodo pradzia
+      * @param d2 periodo pabaig
+      * @return Sarasas darbuotoju
+      */
     @Query(value = "SELECT a FROM Employee a WHERE a.birthDate BETWEEN :d1 AND :d2 ORDER BY a.firstName DESC" )
     List<Employee> findJPQL(LocalDate d1, LocalDate d2);
 

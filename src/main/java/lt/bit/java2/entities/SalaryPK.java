@@ -7,6 +7,10 @@ import javax.persistence.ManyToOne;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+/**
+ * Klase naudojama aprasyti Salary lenteles kompozitini pirmini rakta
+ * @see lt.bit.java2.entities.Salary
+ */
 @Embeddable
 public class SalaryPK implements Serializable {
 
