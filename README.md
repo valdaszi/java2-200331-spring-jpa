@@ -37,6 +37,14 @@ For further reference, please consider the following sections:
 * [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/gradle-plugin/reference/html/)
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/gradle-plugin/reference/html/#build-image)
 * [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/reference/htmlsingle/#boot-features-jpa-and-spring-data)
+* [Thymeleaf template engine](https://www.thymeleaf.org/)
+
+### Using Thymeleaf template engine
+
+* [Thymeleaf iterations](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#iteration)
+* [Thymeleaf conditional statements](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#conditional-evaluation)
+* [Thymeleaf urls](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#link-urls)
+
 
 ### Guides
 The following guides illustrate how to use some features concretely:

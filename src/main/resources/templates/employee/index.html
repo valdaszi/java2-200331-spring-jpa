@@ -23,6 +23,7 @@
             <td>Kodas</td>
             <td>Vardas</td>
             <td>Pavarde</td>
+            <td>Veiksmai</td>
         </tr>
 
 <!--        <tr>-->
@@ -41,6 +42,10 @@
             <td> <a th:href="@{/employee/{empNo}(empNo=${emp.empNo})}"><span th:text="${emp.empNo}"></span></a> </td>
             <td th:text="${emp.firstName}"></td>
             <td th:text="${emp.lastName}"></td>
+            <td>
+                <a th:href="@{/employee/taisyti-form/{empNo}(empNo=${emp.empNo})}">Taisyti</a>
+                <a th:href="@{/employee/delete-ask/{empNo}(empNo=${emp.empNo})}">Naikinti</a>
+            </td>
         </tr>
 
     </table>

@@ -1,5 +1,8 @@
 package lt.bit.java2.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -14,6 +17,7 @@ public class Salary {
 
     // PK: empNo + fromDate
     @EmbeddedId
+    @JsonIgnore
     private SalaryPK id;
 
     private LocalDate toDate;
